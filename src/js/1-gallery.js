@@ -66,7 +66,7 @@ const images = [
     description: 'Lighthouse Coast Sea',
   },
 ];
-const galleryElem = document.querySelector('.gallery');
+const gallery = document.querySelector('.gallery');
 
 function imageTemplate(image) {
     return `<li class="gallery-item">
@@ -79,7 +79,7 @@ function imagesTemplate(images) {
     return images.map(imageTemplate).join('');
 }
 const markup = imagesTemplate(images);
-galleryElem.insertAdjacentHTML('afterbegin', markup);
+gallery.insertAdjacentHTML('afterbegin', markup);
 
 let lightbox = new SimpleLightbox('.gallery-link', {
     captions: true,
